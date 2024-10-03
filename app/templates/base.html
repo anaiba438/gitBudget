@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1> Budget Tracker</h1>
+        <nav> <!--navigation tag-->
+            <a href="/">Home</a> <!--hyperlink/clickable link-->
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; Budget Tracker 𐙚</p>
+    </footer>
+</body>
+</html>
