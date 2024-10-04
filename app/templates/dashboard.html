@@ -1,0 +1,14 @@
+{% extends "base.html" %} <!--inherits from base.html-->
+
+ 
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Dashboard</h2>
+    <nav>
+        <a href="/add-transaction">Add transactions</a>  
+        <a href="/edit-transaction">Edit and view transactions</a>
+        <a href="/manage-categories">Manage categories here</a>
+        <a href="/reports">View reports here</a>
+    </nav>
+{% endblock %}
