@@ -31,3 +31,6 @@ def manage():
 def reports():
     return render_template('reports.html')
 
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
