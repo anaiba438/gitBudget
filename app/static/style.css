@@ -1,0 +1,68 @@
+/* basic style for all pages */
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+    background-color: white;
+    text-align: center;
+}
+
+h1{
+    color: #ff87ab;
+    text-align:center;
+}
+h2, p{
+    color:black;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* sign up page */
+.signup {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 16px;
+}
+
+.signup input[type="text"],
+.signup input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border-style:initial;
+    background-color:#ffe5ec ;    
+}
+
+.signup button{
+    background-color: #ff8fab;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border:none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.signup button:hover{
+    opacity: 1;
+}
+
+.signup, .cancelbtn, .signupbtn {
+    float:center;
+    width: 100%;
+}
