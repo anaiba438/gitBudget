@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+ 
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<!--Neccessary fields and typical checkboxes (terms & conditions, remember me)-->
+    <h2>Sign up</h2>
+    <p>Please fill in the form below to create an account</p>
+    <hr>
+    <label for="email"><b>Email</b>
+</label>
+    <input type="text"
+placeholder="Enter Email" name="email"
+required>
+
+    <label for="psw"><b>Password</b>
+</label>
+    <input type="password"
+placeholder="Enter Password" name="psw"
+required>
+
+    <label for="psw-rep"><b>Repeat Password</b>
+</label>
+    <input type="password"
+placeholder="Repeat Password" name="psw-rep"
+required>
+
+    <label>
+    <input type="checkbox"
+checked="checked" name="remember"
+style="margin-bottom: 15px"> Remember me
+    </label>
+
+    <p>By creating an account you agree to the<a href="#"style='color:dodgerblue'>Terms & Conditions</a>.</p>
+
+<!--cancel and sign up buttons-->
+
+    <div class="clearfix">
+        <button type="button"
+onclick="document.getElementById(id01)"
+.style.display="none"
+class="cancelbutton">Cancel</button>
+        <button type="submit"
+class="signupbutton">Sign up</button>
+    </div>
+</form>
+
+{% endblock %}
