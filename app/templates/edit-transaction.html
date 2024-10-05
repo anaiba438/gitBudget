@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+ 
+{% block title %}edit{% endblock %}
+
+{% block content %}
+    <h2>View and edit your money</h2>
+{% endblock %}
+
+<form>
+    <div class="form-grp">
+        <label for="Income">Income: £</label>
+        <input type="number" id="Income" name="Income" min="0" max="100000" oninput="Total()" required>
+    <br>
+        <label for="Rent">Rent: £</label>
+        <input type="number" id="Rent" name="Rent" min="0" max="100000" oninput="Total()" required>
+    <br>
+        <label for="Groceries">Groceries: £</label>
+        <input type="number" id="Groceries" name="Groceries" min="0" max="100000" oninput="Total()" required>
+    <br>
+        <label for="Transport">Transport: £</label>
+        <input type="number" id="Transport" name="Transport" min="0" max="100000" oninput="Total()" required>
+    <br>
+        <label for="Entertainment">Entertainment: £</label>
+        <input type="number" id="Entertainment" name="Entertainment" min="0" max="100000" oninput="Total()">
+    <br>
+        <label for="Eatingout">Eating out: £</label>
+        <input type="number" id="Eatingout" name="Eatingout" min="0" max="100000" oninput="Total()">
+    <br>
+        <label for="Otherexpenses">Other expenses: £</label>
+        <input type="number" id="Otherexpenses" name="Otherexpenses" min="0" max="100000" oninput="Total()">
+    </div>
+    <h3>Total: £<span id="totalamount">0</span></h3>
+    <button type="submit">Save Changes</button>
+</form>

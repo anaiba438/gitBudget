@@ -1,0 +1,67 @@
+{% extends "base.html" %} 
+
+ 
+{% block title %}Your Transactions{% endblock %}
+
+{% block content %}
+    <h2 style="font-size: 20px;">Track your outgoings</h2>
+    <p style="font-size: 16px;">
+        Start working out where your money goes.
+    </p>
+    <form action="edit-transaction" method="post" class="form-grp">
+        <br>
+        <div class="form-grp">
+            <label for="Income">Income: £</label>
+            <input type="number" id="Income" name="Income" min="0" max="100000" oninput="Total()" required>
+        <br>
+            <label for="Rent">Rent: £</label>
+            <input type="number" id="Rent" name="Rent" min="0" max="100000" oninput="Total()" required>
+        <br>
+            <label for="Groceries">Groceries: £</label>
+            <input type="number" id="Groceries" name="Groceries" min="0" max="100000" oninput="Total()" required>
+        <br>
+            <label for="Transport">Transport: £</label>
+            <input type="number" id="Transport" name="Transport" min="0" max="100000" oninput="Total()" required>
+        <br>
+            <label for="Entertainment">Entertainment: £</label>
+            <input type="number" id="Entertainment" name="Entertainment" min="0" max="100000" oninput="Total()">
+        <br>
+            <label for="Eatingout">Eating out: £</label>
+            <input type="number" id="Eatingout" name="Eatingout" min="0" max="100000" oninput="Total()">
+        <br>
+            <label for="Otherexpenses">Other expenses: £</label>
+            <input type="number" id="Otherexpenses" name="Otherexpenses" min="0" max="100000" oninput="Total()">
+        </div>
+        <h3>Total: £<span id="totalamount">0</span></h3>
+        <button type="button" onclick="submitform()">Save Changes</button>
+    </form>
+    <br>
+    <nav>
+        <a style="color:#e27396 ;" href="/edit-transaction"> click below to view and edit</a>
+    </nav>
+
+<script> // using javascript to give users summary of their info and link add transaction to edit transaction (using local storage)
+    
+    function submitform() {
+        const Income = document.getElementById('Income').value;
+
+        //storing in local storage
+        localStorage.setItem('Income', Income);
+        //redirecting
+         window.location.href = "edit-transaction.html";
+    }    
+    
+    function Total() {
+        const Income = parseFloat(document.getElementById('Income').value) || 0;
+        const Rent = parseFloat(document.getElementById('Rent').value) || 0;
+        const Groceries = parseFloat(document.getElementById('Groceries').value) || 0;
+        const Transport = parseFloat(document.getElementById('Transport').value) || 0;
+        const Entertainment = parseFloat(document.getElementById('Entertainment').value) || 0;
+        const Eatingout = parseFloat(document.getElementById('Eatingout').value) || 0;
+        const Otherexpenses = parseFloat(document.getElementById('Otherexpenses').value) || 0;
+
+        const total = Income + Rent + Groceries + Transport + Entertainment + Eatingout + Otherexpenses;
+        document.getElementById('totalamount').textContent = total.toFixed(2) // to show total with 2 decimal points
+    }
+</script>
+{% endblock %}
