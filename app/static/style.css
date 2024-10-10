@@ -3,16 +3,16 @@ html, body{
     height: 100%;
     margin: 0;
     font-family: Arial;
-    background-color: white;
+    background-image: url(https://i.pinimg.com/originals/6a/55/30/6a55303ddb2bdeaa8540d34c5aaf6652.jpg);
     text-align: center;
 }
 
 h1{
-    color: #ff87ab;
+    color: white;
     text-align:center;
 }
 h2, p{
-    color:black;
+    color:white;
     text-align: center;
 }
 
@@ -25,6 +25,7 @@ nav {
     text-align: center;
     padding: 10px 0;
     width: 100%;
+    color: #ff8fab;
 }
 
 /* sign up page */

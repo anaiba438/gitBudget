@@ -4,32 +4,37 @@
 {% block title %}edit{% endblock %}
 
 {% block content %}
-    <h2>View and edit your money</h2>
+    <h2>View and edit here</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>income</th>
+            <th>rent</th>
+            <th>groceries</th>
+            <th>transport</th>
+            <th>entertainment</th>
+            <th>eatingout</th>
+            <th>other</th>
+        </tr>
+        {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.id }}</td>
+                <td>{{ transaction.income }}</td>
+                <td>{{ transaction.rent }}</td>
+                <td>{{ transaction.groceries }}</td>
+                <td>{{ transaction.transport }}</td>
+                <td>{{ transaction.entertainment }}</td>
+                <td>{{ transaction.eatingout }}</td>
+                <td>{{ transaction.other }}</td>
+                <td>
+                    <a href="{{ url_for('edit_input', id=transaction.id)}}">Edit</a>
+                    <form method="POST" action="{{ url_for('delete_input', id=transaction.id)}}" style="display: inline;">
+                        <input type="submit" value="Delete" onclick="return confirm('Are you sure? :)');">
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
 
-<form>
-    <div class="form-grp">
-        <label for="Income">Income: £</label>
-        <input type="number" id="Income" name="Income" min="0" max="100000" oninput="Total()" required>
-    <br>
-        <label for="Rent">Rent: £</label>
-        <input type="number" id="Rent" name="Rent" min="0" max="100000" oninput="Total()" required>
-    <br>
-        <label for="Groceries">Groceries: £</label>
-        <input type="number" id="Groceries" name="Groceries" min="0" max="100000" oninput="Total()" required>
-    <br>
-        <label for="Transport">Transport: £</label>
-        <input type="number" id="Transport" name="Transport" min="0" max="100000" oninput="Total()" required>
-    <br>
-        <label for="Entertainment">Entertainment: £</label>
-        <input type="number" id="Entertainment" name="Entertainment" min="0" max="100000" oninput="Total()">
-    <br>
-        <label for="Eatingout">Eating out: £</label>
-        <input type="number" id="Eatingout" name="Eatingout" min="0" max="100000" oninput="Total()">
-    <br>
-        <label for="Otherexpenses">Other expenses: £</label>
-        <input type="number" id="Otherexpenses" name="Otherexpenses" min="0" max="100000" oninput="Total()">
-    </div>
-    <h3>Total: £<span id="totalamount">0</span></h3>
-    <button type="submit">Save Changes</button>
-</form>
