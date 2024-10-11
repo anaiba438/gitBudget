@@ -6,36 +6,42 @@
 {% block content %}
     <h2>Login below</h2>  <!-- login form-->
     <body>
-        <div class="signup">
+        <div class="signup form-group">
         <form method="post">
-        
+    
         <hr>
-            <label for="email"><b>Email</b>
+            <label for="email"><b> Email </b>
         </label>
             <input type="text"
-        placeholder="Enter Email" name="email"
+        placeholder="Enter Email" class="input-style" name="email"
         required>
-        
+        </div>
+
+        <div class="signup">
+            <form method="post">
             <label for="psw"><b>Password</b>
         </label>
             <input type="password"
-        placeholder="Enter Password" name="psw"
+        placeholder="Enter Password" class="input-style" name="psw"
         required>
+
         <div class="clearfix">
-            <button type="button"
+            <button type="rounded-button"
     onclick="document.getElementById(id01)"
     .style.display="none"
-    class="cancelbtn">Cancel</button>
+
+    class="rounded-button">Cancel</button>
             <button type="submit"
-    class="signupbtn">Login</button>
+            
+    class="rounded-button">Login</button>
         </div>
     </form>
     </div>
 
         <p>&thinsp;</p> <!-- creating a thin space between values -->
-        <div class="forgot"> Forgot Password? </div>
+        <div class="forgot" style="color: #ff5c8a"> Forgot Password? </div>
         <div class="users_signup">
-        <p>Don't have an account? <a href="/signup">Sign up!</a></p> <!--link to sign up form-->
+        <p>Don't have an account? <a style="color: #ff5c8a"href="/signup">Sign up!</a></p> <!--link to sign up form-->
         </div>
         </div>
     </body>

@@ -1,18 +1,21 @@
 /* basic style for all pages */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
 html, body{
     height: 100%;
     margin: 0;
-    font-family: Arial;
-    background-image: url(https://i.pinimg.com/originals/6a/55/30/6a55303ddb2bdeaa8540d34c5aaf6652.jpg);
+    background: url(https://i.pinimg.com/originals/56/51/af/5651afc7a7751d458424990f20bc4600.jpg);
     text-align: center;
+    justify-content:center;
+    font-family: "Open Sans", sans-serif;
 }
 
 h1{
-    color: white;
+    color: #ff5c8a;
     text-align:center;
 }
 h2, p{
-    color:white;
+    color:#ff5c8a;
     text-align: center;
 }
 
@@ -20,51 +23,73 @@ nav {
     text-align: center;
 }
 
-
-.footer {
-    text-align: center;
-    padding: 10px 0;
+/* edit transaction.html table */
+table {
     width: 100%;
-    color: #ff8fab;
+    border-radius: 20px;
+    margin: 20px 0; 
 }
 
-/* sign up page */
-.signup {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 16px;
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ffc2d1;
+    border-radius: 20px;
+    border-style:hidden;
+
 }
 
-.signup input[type="text"],
-.signup input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border-style:initial;
-    background-color:#ffe5ec ;    
+th {
+    background-color: #ffe5ec;
+    color: #333;
 }
 
-.signup button{
-    background-color: #ff8fab;
-    color: white;
-    padding: 14px 20px;
+tr:nth-child(even) {
+    background-color: #ffe5ec;
+}
+
+tr:hover {
+    background-color: #ffe5ec;
+}
+
+
+/* buttons */
+.rounded-button {
+    border-radius: 50px;
+    background-color: #ffc2d1;
+    color: #000;
+    border-color: #ff5c8a;
+    border-style:groove;
+}
+
+/* input boxes */
+.input-style {
+    width: 30%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ff5c8a;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    justify-content:center;
+}
+
+.input-style2 {
+    width: 5%;
+    padding: 8px;
     margin: 8px 0;
-    border:none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-}
-.signup button:hover{
-    opacity: 1;
+    background-color: #fff;
+    border: 1px solid #ff5c8a;
+    border-radius: 20px;
+    font-size: 10px;
+    transition: border-color 0.3s;
 }
 
-.signup, .cancelbtn, .signupbtn {
-    float:none;
-    width: 100%;
+.form-group {
+    margin-bottom: 20px;
 }
-/* adding transactions page */
+
+.label {
+    display:inline-block;
+    margin-bottom: 5px; 
+}

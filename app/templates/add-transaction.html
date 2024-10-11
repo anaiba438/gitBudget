@@ -10,35 +10,35 @@
     <form method="POST">
         {{ form.hidden_tag() }} <!--protection-->
         <div>
-            {{ form.income.label }} <br>
-            {{ form.income(size=10 )}}<br>
+            {{ form.income.label }}
+            {{ form.income(class="input-style2")}}
         </div>
         <div>
-            {{ form.rent.label }} <br>
-            {{ form.rent(size=10 )}}<br>
+            {{ form.rent.label }}
+            {{ form.rent(class="input-style2" )}}
         </div>
         <div>
-            {{ form.groceries.label }} <br>
-            {{ form.groceries(size=10 )}}<br>
+            {{ form.groceries.label }}
+            {{ form.groceries(class="input-style2")}}
         </div>
         <div>
-            {{ form.transport.label }} <br>
-            {{ form.transport(size=10 )}}<br>
+            {{ form.transport.label }}
+            {{ form.transport(class="input-style2" )}}
         </div>
         <div>
-            {{ form.entertainment.label }} <br>
-            {{ form.entertainment(size=10 )}}<br>
+            {{ form.entertainment.label }}
+            {{ form.entertainment(class="input-style2")}}
         </div>
         <div>
-            {{ form.eatingout.label }} <br>
-            {{ form.eatingout(size=10 )}}<br>
+            {{ form.eatingout.label }}
+            {{ form.eatingout(class="input-style2")}}
         </div>
         <div>
-            {{ form.other.label }} <br>
-            {{ form.other(size=10 )}}<br>
+            {{ form.other.label }}
+            {{ form.other(class="input-style2")}}
         </div>
         <div>
-            {{ form.submit() }}
+            {{ form.submit(class="rounded-button")}}
         </div>
     </form>
 

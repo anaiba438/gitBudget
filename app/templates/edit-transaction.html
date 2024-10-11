@@ -8,18 +8,16 @@
 
     <table>
         <tr>
-            <th>ID</th>
-            <th>income</th>
-            <th>rent</th>
-            <th>groceries</th>
-            <th>transport</th>
-            <th>entertainment</th>
-            <th>eatingout</th>
-            <th>other</th>
+            <th> Income </th>
+            <th> Rent </th>
+            <th> Groceries </th>
+            <th> Transport </th>
+            <th> Entertainment </th>
+            <th> Eating out </th>
+            <th> Other </th>
         </tr>
         {% for transaction in transactions %}
             <tr>
-                <td>{{ transaction.id }}</td>
                 <td>{{ transaction.income }}</td>
                 <td>{{ transaction.rent }}</td>
                 <td>{{ transaction.groceries }}</td>
@@ -28,9 +26,9 @@
                 <td>{{ transaction.eatingout }}</td>
                 <td>{{ transaction.other }}</td>
                 <td>
-                    <a href="{{ url_for('edit_input', id=transaction.id)}}">Edit</a>
-                    <form method="POST" action="{{ url_for('delete_input', id=transaction.id)}}" style="display: inline;">
-                        <input type="submit" value="Delete" onclick="return confirm('Are you sure? :)');">
+                    <a style="color: #ff5c8a" href="{{ url_for('edit_input', id=transaction.id)}}">Edit</a>
+                    <form method="POST" action="{{ url_for('delete_input', id=transaction.id)}}">
+                        <input type="submit" value="Delete" class="rounded-button";" onclick="return confirm('Are you sure? :)');">
                     </form>
                 </td>
             </tr>
